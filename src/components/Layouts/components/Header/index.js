@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner, faMagnifyingGlass, faSignIn } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react';
 import Tippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
@@ -8,6 +8,7 @@ import styles from './Header.module.scss'
 import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import SearchItem from '~/components/SearchItem';
+import Button from '~/components/Button';
 
 
 const cx = classNames.bind(styles);
@@ -62,7 +63,9 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className='actions'>
-                    {/* action */}
+                    <Button outline leftIcon={<FontAwesomeIcon icon={faSignIn}/>}>Log In</Button>
+                    <Button primary>Register</Button>
+                        {/* 28:07 */}
                 </div>
             </div>
         </header>
